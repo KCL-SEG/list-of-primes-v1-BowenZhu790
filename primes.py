@@ -1,12 +1,13 @@
 """List of prime numbers generator."""
 """ENTER YOUR SOLUTION HERE!"""
-import numpy as np
 def primes(number_of_primes):
-    i = 1
+    number = 1
     list = []
-    while np.size(list) < number_of_primes:
-        k = 1;
-        if k != 1 and k != i and i % k == 0:
-            list.append(i)
-        i++
+    while len(list) < number_of_primes:
+        for k in range(1,number+1):
+            if number == 1 or (k != 1 and k != number and number % k == 0):
+                break
+            elif k == number:
+                list.append(number)
+        number+=1
     return list
